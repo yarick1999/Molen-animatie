@@ -1,0 +1,154 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(b.jpg);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	overflow: hidden;
+}
+
+#container {
+	position: absolute;
+	margin: 0 auto;
+	bottom: 69vh;
+}
+
+#molen {
+	display: inline;
+	position: absolute;
+	float: left;
+	height: 300px;
+	margin-top: 250px;
+	margin-left: 180px;
+	z-index: 1000;
+}
+
+#wieken {
+	position: absolute;
+	height: 400px;
+	margin-top: 120px;
+	margin-left: 67px;
+	float: left;
+	clear: left;
+	z-index: 1200;
+	animation-name: wieken;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes wieken {
+
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+#vogel {
+	width: 200px;
+	float: right;
+	margin-top: 400px;
+	margin-right: -300px;
+	animation-name: vogel;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes vogel {
+	from {
+		transform: translate(-300px, 400px);
+	}
+
+	to {
+		transform: translate(-1800px, -450px);
+	}
+}
+
+#zon {
+	animation: zon 3s linear  infinite;
+}
+
+@keyframes zon {
+	0% {
+		transform: scale(1)
+	}
+
+	50% {
+		transform: scale(1.5)
+	}
+
+	100% {
+		transform: scale(1)
+	}
+}
+
+#konijn {
+	display: inline;
+	height: 85px;
+	width: 100px;
+	z-index: 200;
+	margin-top: 250px;
+	position: absolute;
+	bottom: 0;
+	background-size: 300%;
+	float: left;
+	/*margin-left: -120px;*/
+}
+
+/* 
+ * Vanaf hier begint de Molen CSS animatie opdracht
+ * Schrijft de juiste code om de molen opdracht te voltooien
+ * De konijn sprite bevindt zich in de molen opdracht map 
+*/
+
+
+/* Gebruik dit stukje code om de sprite te animeren */
+.sprite {
+	background: url(sprite.png) 0px 0px no-repeat;
+	/*Bron sprite.png: https://www.pngfly.com/png-efbilh/  */
+
+	/* Vul hier CSS animatie code in */
+
+	animation-name: figuurSpring; 
+	animation-duration: 1s; 
+	animation-timing-function: steps(3);
+	animation-iteration-count: infinite;
+	
+}
+
+@keyframes figuurSpring{
+	from {
+		background-position: 0px;
+	}
+	
+	to {
+		background-position: -300px;
+	}
+}
+
+.linksNaarRechts{
+	animation-name: rennen;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+@keyframes rennen {
+	from {
+		transform: translate(-100px, 500px);
+	}
+
+	to {
+		transform: translate(1800px, 300px);
+	}
+}
